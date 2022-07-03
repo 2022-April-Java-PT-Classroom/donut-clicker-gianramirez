@@ -41,20 +41,28 @@ describe("DonutMaker", () => {
     })
 
     test("should increase the amount of donuts by 1 for every autoclicker", ()=> {
-        const underTest = new DonutMaker(100, 1, 100);
-        underTest.addAutoclicker();
+        const underTest = new DonutMaker(100, 2, 100);
         underTest.addDonut();
         expect(underTest.numAutoclickers).toEqual(2);
-        expect(underTest.numDonuts).toEqual(101);
+        expect(underTest.numDonuts).toEqual(102);
     })
-        
-    // test("should increase the amount of donuts by 1 for third autoclicker", ()=> {
-    //     const underTest = new DonutMaker(1, 2, 100);
+
+    test("should increase the amount of donuts by 1 for every autoclicker", ()=> {
+        const underTest = new DonutMaker(100, 3, 100);
+        underTest.addDonut();
+        expect(underTest.numAutoclickers).toEqual(3);
+        expect(underTest.numDonuts).toEqual(103);
+    })
+    
+    // test("should be able to add a donut multiplier and retrieve the total count", () => {
+    //     // Arrange
+    //     const underTest = new DonutMaker(100, 1, 100, );
+    //     // Act
     //     underTest.addDonut();
-    //     underTest.addAutoclicker();
-    //     expect(underTest.numAutoclickers).toEqual(3);
-    //     expect(underTest.numDonuts).toEqual(2);
-    // })
+    //     // Assert
+    //     expect(underTest.numDonuts).toEqual(1);
+    // });
+    
 
 
 });
