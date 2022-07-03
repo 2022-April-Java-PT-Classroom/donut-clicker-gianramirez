@@ -29,11 +29,32 @@ describe("DonutMaker", () => {
     });
 
     test("should increase the cost of autoclicker with purchase of autoclicker", ()=> {
-        const underTest = new DonutMaker(110, 1);
-        underTest.increaseAutoclickerCost();
+        const underTest = new DonutMaker(100, 1, 100);
         underTest.addAutoclicker();
-        expect(underTest.numDonuts).toEqual(0);
+        expect(underTest.autoclickerCost).toEqual(110);
+    })
+
+    test("should increase the cost of autoclicker with a second purchase of autoclicker", ()=> {
+        const underTest = new DonutMaker(100, 2, 110);
+        underTest.addAutoclicker();
+        expect(underTest.autoclickerCost).toEqual(121);
+    })
+
+    test("should increase the amount of donuts by 1 for every autoclicker", ()=> {
+        const underTest = new DonutMaker(100, 1, 100);
+        underTest.addAutoclicker();
+        underTest.addDonut();
         expect(underTest.numAutoclickers).toEqual(2);
-    });
+        expect(underTest.numDonuts).toEqual(101);
+    })
+        
+    // test("should increase the amount of donuts by 1 for third autoclicker", ()=> {
+    //     const underTest = new DonutMaker(1, 2, 100);
+    //     underTest.addDonut();
+    //     underTest.addAutoclicker();
+    //     expect(underTest.numAutoclickers).toEqual(3);
+    //     expect(underTest.numDonuts).toEqual(2);
+    // })
+
 
 });
