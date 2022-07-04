@@ -48,20 +48,13 @@ describe("DonutMaker", () => {
     })
 
     test("should increase the amount of donuts by 1 for every autoclicker", ()=> {
-        const underTest = new DonutMaker(100, 3, 100);
+        const underTest = new DonutMaker(102, 3, 100);
         underTest.addDonut();
         expect(underTest.numAutoclickers).toEqual(3);
         expect(underTest.numDonuts).toEqual(103);
     })
     
-    // test("should be able to add a donut multiplier and retrieve the total count", () => {
-    //     // Arrange
-    //     const underTest = new DonutMaker(100, 1, 100, );
-    //     // Act
-    //     underTest.addDonut();
-    //     // Assert
-    //     expect(underTest.numDonuts).toEqual(1);
-    // });
+
     
 
 
