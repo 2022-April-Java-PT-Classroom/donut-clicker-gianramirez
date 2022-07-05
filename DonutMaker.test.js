@@ -54,8 +54,34 @@ describe("DonutMaker", () => {
         expect(underTest.numDonuts).toEqual(103);
     })
     
+    test("should be able to add multiplier with 10 donuts", () => {
+        const underTest = new DonutMaker(100, 2, 100, 0);
+        underTest.addMultiplier();
+        expect(underTest.numDonuts).toEqual(90);
+        expect(underTest.numMultipliers).toEqual(1);
+    })
 
+    test("should increase the cost of multiplier with purchase of multiplier", ()=> {
+        const underTest = new DonutMaker(100, 1, 100, 1, 10);
+        underTest.addMultiplier();
+        expect(underTest.numMultipliers).toEqual(2);
+        expect(underTest.multipliersCost).toEqual(11);
+    })
+
+    test("should prevent purchase of multiplier with 9 donuts", ()=> {
+        const underTest = new DonutMaker(9, 1, 100, 0, 10);
+        underTest.addMultiplier();
+        expect(underTest.numDonuts).toEqual(9);
+        expect(underTest.numMultipliers).toEqual(0);
+    })
     
+    test("should increase the amount of donuts by 1.2 after purchase of multiplier", ()=> {
+        const underTest = new DonutMaker(100, 1, 100, 0, 10);
+        underTest.addMultiplier();
+        expect(underTest.numDonuts).toEqual(1.2);
+        expect(underTest.numMultipliers).toEqual(1);
+    })
+
 
 
 });
