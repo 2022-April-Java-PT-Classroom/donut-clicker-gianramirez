@@ -9,7 +9,8 @@ class DonutMaker {
     }
 
     addDonut() {
-        this.numDonuts += 1;
+        this.numDonuts += this.numAutoclickers >0 ? 1 * this.numAutoclickers: 1;
+        
 
         // if(this.numAutoclickers >= 1){
         //     this.numDonuts++;
@@ -18,6 +19,7 @@ class DonutMaker {
     }
 
     addAutoclicker() {
+
         if(this.numDonuts >= 100){
             this.numDonuts -= 100;
             this.numAutoclickers += 1;
@@ -40,5 +42,6 @@ class DonutMaker {
     }
 
 }
+
 
 export default DonutMaker;
