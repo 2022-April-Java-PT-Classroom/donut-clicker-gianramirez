@@ -15,10 +15,6 @@ class DonutMaker {
     addDonut() {
         this.numDonuts += this.numAutoclickers >0 ? 1 * this.numAutoclickers: 1;
         
-        
-        // if (this.numMultipliers > 0 ){
-        //     1 * this.numMultipliers
-        // } else this.numDonuts += 1;
     }
 
     addAutoclicker() {
@@ -42,10 +38,6 @@ class DonutMaker {
             this.multipliersCost = (this.multipliersCost * 1.1);
             this.clickValue = (Math.pow(1.2, this.numMultipliers));
         }
-
-        // if (this.clickValue > 1) {
-        //     this.numDonuts += (1 + this.clickValue);
-        // }
 
     }
 

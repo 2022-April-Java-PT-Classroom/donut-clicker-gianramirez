@@ -15,20 +15,12 @@ nav {
     line-height: 15px;
     text-align: end;
     background-image: url(images/PinkDonut.png);
+    background-position: center;
     padding: 1em;
-    background-size: 50px;
+    background-size: 90px;
     border-radius: 50%;
-    height: 50px;
-    width: 50px;
+    height: 80px;
+    width: 80px;
 
 }
 
-
-
-
-/* #button-donut {
-    width: 150px;
-    height: 150px;
-    background-image: url("./images/PinkDonut.png");
-    background-repeat: no-repeat;
-} */

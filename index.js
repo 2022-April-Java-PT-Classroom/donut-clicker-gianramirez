@@ -17,6 +17,7 @@ donutsMade.innerText = 'Donuts: ' + MkDonuts.numDonuts;
 
 autoclickerBtn.addEventListener('click', ()=> {
   MkDonuts.addAutoclicker();
+  setInterval(autoClick, 1000);
   clickerspurchased.innerText = 'Autoclickers: ' + MkDonuts.numAutoclickers;
   clickerCost.innerText = 'Autoclicker Cost: ' + MkDonuts.autoclickerCost;
 })
@@ -26,3 +27,7 @@ multiplierBtn.addEventListener('click', ()=> {
   multiplierspurchased.innerText = 'Multipliers: ' + MkDonuts.numMultipliers;
   multiplierCost.innerText = 'Multiplier Cost: ' + MkDonuts.multipliersCost;
 })
+
+function autoClick(){
+  MkDonuts.numDonuts += 1;
+}
