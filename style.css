@@ -1,6 +1,30 @@
 body {
     background-color: #6d5072;
+    line-height: normal;
+    font-size: 17px;
 }
+
+nav {
+    text-align: center;
+    top: 0;
+    position: relative;
+}
+
+#buttonDonut {
+    font-size: 17px;
+    line-height: 15px;
+    text-align: end;
+    background-image: url(images/PinkDonut.png);
+    padding: 1em;
+    background-size: 50px;
+    border-radius: 50%;
+    height: 50px;
+    width: 50px;
+
+}
+
+
+
 
 /* #button-donut {
     width: 150px;

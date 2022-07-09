@@ -28,7 +28,7 @@ class DonutMaker {
             this.numAutoclickers += 1;
         }   
 
-        if(this.numAutoclickers >=1){
+        if(this.numAutoclickers >=0){
             this.autoclickerCost += this.autoclickerCost * 0.1
         }
     } 
