@@ -24,7 +24,7 @@ class DonutMaker {
     addAutoclicker() {
 
         if(this.numDonuts >= 100){
-            this.numDonuts -= 100;
+            this.numDonuts -= this.autoclickerCost;
             this.numAutoclickers += 1;
         }   
 
@@ -47,6 +47,14 @@ class DonutMaker {
         //     this.numDonuts += (1 + this.clickValue);
         // }
 
+    }
+
+    resetGame(){
+        this.numDonuts = 0;
+        this.numAutoclickers = 0;
+        this.autoclickerCost = 100;
+        this.multipliersCost = 10;
+        this.numMultipliers = 0;
     }
 
 }

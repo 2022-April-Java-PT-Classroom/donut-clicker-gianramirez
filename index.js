@@ -1,30 +1,21 @@
 import DonutMaker from "./DonutMaker";
 
-// const container = (document.querySelector('.container').innerText =
-//   'mmmmmmmmm doughnuts.... ahhhhhhh!');
+const buttonDonut = document.querySelector('#buttonDonut');
+const donutsMade = document.querySelector('#donutsMade');
+const autoclickerBtn = document.querySelector('#autoclickerBtn');
+const clickerspurchased = document.querySelector('clickerspurchased');
+const MkDonuts = new DonutMaker(0, 0, 100, 0, 10, 1);
 
-renderPage();
+buttonDonut.addEventListener('click', ()=> {
+MkDonuts.addDonut();
+donutsMade.innerText = ' ' + MkDonuts.numDonuts;
+})
 
-function renderPage(){
-  addDonut;
-}
-
-const MakingDonut = new DonutMaker(0, 0, 100, 0, 10, 1);
-
-
-function addDonut(){
-  const DonutBtn = document.querySelector('#button-donut');
-  const buyAutoClicker = document.querySelector('#autoclicker')
-  const buyMultiplier = document.querySelector('#clickmultipliers')
-
-  DonutBtn.addEventListener('click', ()=> {
-    MakingDonut.addDonut();
-  })
-
-  buyAutoClicker.addEventListener('click', ()=> {
-    MakingDonut.addAutoclicker();
-  })
+autoclickerBtn.addEventListener('click', ()=> {
+  MkDonuts.addAutoclicker();
+  clickerspurchased.innerText = 'auto: ' + MkDonuts.numAutoclickers;
+})
 
 
-}
+
 
