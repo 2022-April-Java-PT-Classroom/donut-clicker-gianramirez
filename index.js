@@ -9,25 +9,34 @@ const multiplierBtn = document.querySelector('#multiplierBtn');
 const multiplierspurchased = document.querySelector('#multiplierspurchased');
 const multiplierCost = document.querySelector('#multiplierCost');
 const MkDonuts = new DonutMaker(0, 0, 100, 0, 10, 1);
+updateCounts();
 
 buttonDonut.addEventListener('click', ()=> {
 MkDonuts.addDonut();
-donutsMade.innerText = 'Donuts: ' + MkDonuts.numDonuts;
+updateCounts();
 })
 
 autoclickerBtn.addEventListener('click', ()=> {
   MkDonuts.addAutoclicker();
   setInterval(autoClick, 1000);
-  clickerspurchased.innerText = 'Autoclickers: ' + MkDonuts.numAutoclickers;
-  clickerCost.innerText = 'Autoclicker Cost: ' + MkDonuts.autoclickerCost;
+  updateCounts();
 })
 
 multiplierBtn.addEventListener('click', ()=> {
   MkDonuts.addMultiplier();
-  multiplierspurchased.innerText = 'Multipliers: ' + MkDonuts.numMultipliers;
-  multiplierCost.innerText = 'Multiplier Cost: ' + MkDonuts.multipliersCost;
+  updateCounts();
 })
 
 function autoClick(){
-  MkDonuts.numDonuts += 1;
+  MkDonuts.numDonuts += (MkDonuts.numAutoclickers * 1);
+  updateCounts();
 }
+
+function updateCounts() {
+  donutsMade.innerText = 'Donuts: ' + MkDonuts.numDonuts;
+  clickerspurchased.innerText = 'Autoclickers: ' + MkDonuts.numAutoclickers;
+  clickerCost.innerText = 'Autoclicker Cost: ' + MkDonuts.autoclickerCost;
+  multiplierspurchased.innerText = 'Multipliers: ' + MkDonuts.numMultipliers;
+  multiplierCost.innerText = 'Multiplier Cost: ' + MkDonuts.multipliersCost;
+
+};

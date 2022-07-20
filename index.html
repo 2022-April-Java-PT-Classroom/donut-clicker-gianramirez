@@ -4,35 +4,48 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap');
+      </style>
     <link rel="stylesheet" href="style.css">
     <title>Donut Clicker</title>
   </head>
   <body>
     <header>
       <nav>
-        <li id="company">Fred The Baker Baking Company</li>
-        <li id="cookie"><a href="https://orteil.dashnet.org/cookieclicker/">Clicker</a></li>
-        <li id="Contact"><a href="aboutme.html"> Me</a></li>
+        <ul class="links">
+          <li id="company"><a href="FredtheBaker.html">[Fred The Baker Baking Company]</a></li>
+          <li id="cookie"><a href="https://orteil.dashnet.org/cookieclicker/">[Clicker Inspo]</a></li>
+          <li id="Contact"><a href="aboutme.html">[The Developer]</a></li>
+        </ul>
       </nav>
     </header>
 
     <section id="click">
-      <button id="buttonDonut"></button>
+      <div id = "buttonDonut"  onClick="addDonut()">
+        <img src="https://media.giphy.com/media/E2fyfOAXa8fi4qGsSq/giphy.gif" width="200px"/>
+      </div>
       <div id="donutsMade"></div>
     </section>
 
-    <section id="autoclicker">
-      <button id="autoclickerBtn">Buy Autoclicker</button>
-      <div id="clickerspurchased"></div>
-      <div id="clickerCost"></div>
-    </section>
+    <section class ="row">
+      <section id="purchase">
+        <div id="autoclickerBtn">
+          <img class="auto" src="./images/BuyAutoclickers.png" width="350px" />
+        </div>
+        <div id="clickerspurchased"></div>
+        <div id="clickerCost"></div>
+      </section>
 
-    <section id="clickmultiplier">
-      <button id="multiplierBtn">Purchase Donut Multipliers</button>
-      <div id="multiplierspurchased"></div>
-      <div id="multiplierCost"></div>
-    </section>
 
+      <section id="purchase">
+        <div id="multiplierBtn">
+          <img class="multi" src="./images/BuyMultipliers.png" width="350px" />
+        </div>
+        <div id="multiplierspurchased"></div>
+        <div id="multiplierCost"></div>
+      </section>
+  </section>
 
 
     <div class="container"></div>
