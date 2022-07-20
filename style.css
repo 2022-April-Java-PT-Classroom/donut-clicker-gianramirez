@@ -1,0 +1,81 @@
+body {
+    background-color: #0b081f;
+    line-height: normal;
+    color:fuchsia;
+    font-size: 25px;
+    text-align: center;
+    font-family: 'Fredoka One', cursive;
+}
+
+p {
+    text-align: center;
+    margin: 0 15 0 15;
+}
+
+.fred {
+    text-align: center;
+    margin: 0px 35px 0px 35px;
+}
+
+.links {
+    width: 100%;
+    display: inline-block;
+    text-align: center;
+    padding: 0;
+    list-style: none;
+    margin-left: 0px; 
+}
+
+li {
+    display: inline-block;
+    text-align:center; 
+    text-decoration: underline;
+    padding: 0 14px;
+}
+
+li a {
+    color: fuchsia;
+    text-decoration: none;
+}
+
+
+#click {
+    margin-top: 100px;
+}
+
+#click:hover {
+    cursor: pointer;
+}
+
+.auto {
+    margin: 0;
+}
+
+.multi {
+    margin: 0;
+}
+
+.row {
+    display: flex;
+    margin-left: 700px;
+}
+
+.purchase {
+    flex: 0;
+}
+
+p a {
+    color: fuchsia;
+    text-decoration: none;
+}
+
+.devpic {
+    text-align: center;
+    width: 150px;
+    height: 150px;
+}
+
+.linkdonut {
+    width: 50px;
+    height: 50px;
+}
